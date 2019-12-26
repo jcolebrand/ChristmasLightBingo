@@ -52,7 +52,7 @@ let commonPhrases = [
     {phrase: 'Nativity with no Baby Jesus', multiple: true, list: 'common'},
 
     //creepy
-    {phrase: 'Creepy Nativity', multiple: true, list: 'common'},
+    {phrase: 'Creepy Nativity', multiple: false, list: 'common'},
     {phrase: 'Creepy Santa', multiple: true, list: 'common'},
     {phrase: 'Creepy Snowman', multiple: true, list: 'common'},
 
