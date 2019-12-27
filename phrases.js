@@ -1,11 +1,4 @@
-﻿let phrases = [
-    {phrase:'test',multiple:false},
-    {phrase:'what', multiple: true}
-];
-
-//15/6/3 -> list -> randomize
-
-// fischer yates shuffle 
+﻿// fischer yates shuffle 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
