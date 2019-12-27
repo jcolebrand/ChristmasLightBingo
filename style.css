@@ -49,15 +49,3 @@ hr {
     align-items: center;
     background-color: white;
 }
-
-.card-column.rare { 
-    color: red;
-}
-
-.card-column.uncommon { 
-    color: green;
-}
-
-.card-column.common { 
-    color: unset;
-}
