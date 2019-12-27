@@ -83,8 +83,18 @@ let rarePhrases = [
 
 let centerPhrases = [
     '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
     'Free Space<hr/>Instant Win!!<br/>12 Days of Christmas (all)',
-    'Free Space<hr/>Instant Win!!<br/>Yard blew a fuse!!'
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
+    'Free Space<hr/>Instant Win!!<br/>Yard blew a fuse!!',
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">',
+    '<img src="snowballs2.png">'
 ]
 
 function generatePhrases() {
