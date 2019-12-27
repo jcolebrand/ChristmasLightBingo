@@ -109,10 +109,12 @@ function generatePhrases() {
                 let inner = item.phrase;
                 var r2 = (Math.floor(Math.random() * 512) %9) %6;
                 if (item.multiple && r2 > 1) {
-                        inner += "<br/>"
-                        for(let r = 0; r < r2; r++) {
-                            inner += "◻ "
-                        }
+                    inner += "<br/>"
+                    for(let r = 0; r < r2; r++) {
+                        inner += "◻ "
+                    }
+                    cell.classList.add(`multi-count-${r2}`)
+                    cell.classList.add(`multi-count`)
                 }
                 cell.innerHTML = inner;
                 cell.classList.add(item.list);

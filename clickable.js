@@ -1,12 +1,40 @@
 const toggled = 'toggled';
 
+replaceAt = function(str, index, replacement) {
+    return str.substr(0, index) + replacement+ str.substr(index + replacement.length);
+}
+
 function handleClickableBoxes(evt) {
     let me = evt.target;
 
+    var hasMultiTarget = false;
+    var goodMultiTarget = false;
+
+    if(me.classList.contains('multi-count')) {
+        hasMultiTarget = true;
+        var counterClass = 0;
+        Array.from(me.classList).forEach(x => {if (x.startsWith('multi-count-')) {counterClass = x.replace('multi-count-','')}});
+        if (!me.classList.contains(`multi-click-${counterClass}`)) {
+            var innerCount = 0;
+            Array.from(me.classList).forEach(x => {if (x.startsWith('multi-click-')) {innerCount = x.replace('multi-click-','')}});
+            me.innerHTML = replaceAt(me.innerHTML, me.innerHTML.indexOf('◻'), '◼️');
+            Array.from(me.classList).forEach(x => {if (x.startsWith('multi-click-')) {me.classList.remove(x)}});
+            innerCount = parseInt(innerCount) + 1;
+            me.classList.add(`multi-click-${innerCount}`);
+            if (innerCount == counterClass) {
+                goodMultiTarget = true;
+            }
+        } else {
+            goodMultiTarget = true;
+        }
+    }
+
+    var goodMulti = (hasMultiTarget && goodMultiTarget) || (!hasMultiTarget && !goodMultiTarget)
     if(me.classList.contains(toggled)) {
         me.classList.remove(toggled)
     } else {
-        me.classList.add(toggled)
+        if (goodMulti)
+            me.classList.add(toggled)
     }
 
     var classToCheck = '';
