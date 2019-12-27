@@ -57,6 +57,7 @@ let commonPhrases = [
     {phrase: 'Creepy Snowman', multiple: true, list: 'common'},
 
     // multiple: false
+    {phrase: 'Hanukkah', multiple: false, list: 'common'},
     {phrase: 'Car with Christmas Lights', multiple: false, list: 'common'},
     {phrase: 'Extreme Patriot', multiple: false, list: 'common'},
     {phrase: 'Angels Flying in Trees', multiple: false, list: 'common'},
